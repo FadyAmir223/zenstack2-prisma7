@@ -13,6 +13,12 @@ generator client {
     output = "../src/generated/prisma"
 }
 
+generator pothos {
+    provider = "prisma-pothos-types"
+    output = "../src/generated/pothos-prisma-types.ts"
+    clientOutput = "./prisma"
+}
+
 model User {
     id Int @id() @default(autoincrement())
     email String @unique()

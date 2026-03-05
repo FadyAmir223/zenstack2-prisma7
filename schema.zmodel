@@ -19,6 +19,13 @@ plugin prisma {
   generateClient = false
 }
 
+// for graphql
+generator pothos {
+  provider = "prisma-pothos-types"
+  output = "../src/generated/pothos-prisma-types.ts"
+  clientOutput = "./prisma" // relative path from pothos output to prisma client
+}
+
 model User {
   id    Int     @id @default(autoincrement())
   email String  @unique
