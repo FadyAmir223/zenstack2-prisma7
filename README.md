@@ -1,0 +1,3 @@
+```sh
+pnpm db:generate
+```
